@@ -1,0 +1,20 @@
+/* Logo glow animation keyframes */
+@keyframes logo-glow {
+  0%, 100% {
+    filter: brightness(2.2) contrast(2) saturate(1.4) drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 6px);
+  }
+  50% {
+    filter: brightness(2.6) contrast(2.2) saturate(1.6) drop-shadow(rgba(255, 255, 255, 0.8) 0px 0px 10px);
+  }
+}
+
+.logo-bright {
+    filter: brightness(2.2) contrast(2) saturate(1.4) drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 6px) !important;
+    image-rendering: -webkit-optimize-contrast !important;
+    mix-blend-mode: normal !important;
+    will-change: filter !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    animation: 4s ease-in-out 0s infinite normal none running logo-glow !important;
+  }
+  

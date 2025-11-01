@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
-}
+/* Custom styles to complement Tailwind CSS */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Add any custom animations or complex styles here that are difficult to achieve with Tailwind utilities */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.text-muted-foreground {
+  --muted-foreground: 220 8% 46%;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Add just to get the feel of full viewport height */
+main {
+  min-height: 98vh;
 }
