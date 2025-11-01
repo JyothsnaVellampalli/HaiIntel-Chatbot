@@ -1,7 +1,7 @@
 const MainContent = () => {
   return (
     <main className="pt-20 flex-1">
-      <div className="container mx-auto px-4 pt-12 min-h-full">
+      <div className="container mx-auto px-6 pt-12 min-h-full">
         <section className="text-center mb-12">
           <h2 class="text-4xl lg:text-5xl font-bold text-foreground">AI Accelerators That Deliver Outcomes — Not Just Tools</h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed pt-6">
