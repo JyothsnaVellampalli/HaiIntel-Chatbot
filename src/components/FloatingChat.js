@@ -13,6 +13,17 @@ const FloatingChat = () => {
 
   // Initialize session and load messages from localStorage
   useEffect(() => {
+    const setDefaultMessage = () => {
+      const welcomeMessage = {
+        id: 1,
+        text: "Hello! I'm your HaiIntel assistant. How can I help you today?",
+        isBot: true,
+        timestamp: new Date(),
+        isComplete: true
+      };
+      setMessages([welcomeMessage]);
+    };
+
     // Use localStorage for session ID to persist across normal refreshes
     let currentSessionId = localStorage.getItem('haiintel_chatSessionId');
     if (!currentSessionId) {
@@ -43,17 +54,6 @@ const FloatingChat = () => {
       // Set default welcome message for new sessions
       setDefaultMessage();
     }
-
-    const setDefaultMessage = () => {
-      const welcomeMessage = {
-        id: 1,
-        text: "Hello! I'm your HaiIntel assistant. How can I help you today?",
-        isBot: true,
-        timestamp: new Date(),
-        isComplete: true
-      };
-      setMessages([welcomeMessage]);
-    };
   }, []);
 
   // Save messages to localStorage whenever messages change
